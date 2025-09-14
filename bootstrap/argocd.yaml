@@ -8,7 +8,7 @@ spec:
     namespace: argocd
     server: https://kubernetes.default.svc
   source:
-    path: argocd-install
+    path: bootstrap/argocd-install
     repoURL: https://github.com/EvannDev/gitops-homelab.git
     targetRevision: HEAD
   sources: []
