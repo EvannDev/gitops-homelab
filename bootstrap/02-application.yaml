@@ -12,7 +12,7 @@ spec:
     repoURL: https://github.com/EvannDev/gitops-homelab.git
     targetRevision: HEAD
   sources: []
-  project: infrastructure
+  project: core
   syncPolicy:
     automated:
       prune: false
