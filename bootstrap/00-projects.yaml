@@ -4,7 +4,18 @@ metadata:
   name: core
   namespace: argocd
 spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
   description: Core Layer
+  destinationServiceAccounts:
+  - defaultServiceAccount: in-cluster
+    namespace: '*'
+    server: https://kubernetes.default.svc
+  destinations:
+  - name: in-cluster
+    namespace: '*'
+    server: https://kubernetes.default.svc
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
