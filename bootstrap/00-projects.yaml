@@ -4,4 +4,4 @@ metadata:
   name: infrastructure
   namespace: argocd
 spec:
-  description: Infrastructure Layer
+  description: Infrastructure Laye
