@@ -1,0 +1,1 @@
+helm install argocd argo/argo-cd --version 8.3.7 -f bootstrap/argocd-install/values.yaml -n argocd --create-namespace
