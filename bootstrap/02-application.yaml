@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bootstraps
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  source:
+    path: bootstrap
+    repoURL: https://github.com/EvannDev/gitops-homelab.git
+    targetRevision: HEAD
+  sources: []
+  project: infrastructure
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+      enabled: true
